@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class arrayListshopping {
+
+	public static void main(String[] args) {
+		// shopping
+		
+		ArrayList<String> buy = new ArrayList<String>();
+        boolean userexit = false;
+        Scanner sc = new Scanner(System.in);
+
+        do{
+            System.out.println("Add item (x = exit)");
+            String newItem = sc.nextLine();
+           
+            if (newItem.equals("x")) 
+            {
+            	userexit = true;
+                
+            	for (String s : buy)
+            	 System.out.println(s);
+            }
+            else
+                buy.add(newItem);
+        } while(!userexit);
+       
+        sc.close();
+    }
+}
+
